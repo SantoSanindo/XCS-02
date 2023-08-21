@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EasyModbus, Version=5.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyModbusTCP.5.6.0\lib\net40\EasyModbus.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -73,13 +76,55 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="FormDatabase.Designer.vb">
+      <DependentUpon>FormDatabase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDatabase.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.vb">
+      <DependentUpon>FormMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaterial.Designer.vb">
+      <DependentUpon>FormMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModbus.Designer.vb">
+      <DependentUpon>FormModbus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormModbus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsg.Designer.vb">
+      <DependentUpon>FormMsg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelect.Designer.vb">
+      <DependentUpon>FormSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleDeclaration.vb" />
+    <Compile Include="ModuleGeneral.vb" />
+    <Compile Include="ModuleKoneksiDB.vb" />
+    <Compile Include="ModuleReadWrite.vb" />
+    <Compile Include="ModuleRFID.vb" />
+    <Compile Include="ModuleZebraUSB.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -97,6 +142,27 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormDatabase.resx">
+      <DependentUpon>FormDatabase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaterial.resx">
+      <DependentUpon>FormMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModbus.resx">
+      <DependentUpon>FormModbus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsg.resx">
+      <DependentUpon>FormMsg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelect.resx">
+      <DependentUpon>FormSelect.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -115,6 +181,13 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\FAIL.emf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\PASS.emf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
