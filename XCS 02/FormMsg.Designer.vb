@@ -42,6 +42,7 @@ Partial Class FormMsg
         Me.ClientSize = New System.Drawing.Size(480, 301)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "FormMsg"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormMsg"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -553,6 +553,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "FormLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormLogin"
         Me.ResumeLayout(False)
         Me.PerformLayout()

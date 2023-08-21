@@ -233,6 +233,7 @@ Partial Class FormModbus
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormModbus"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormModbus"
         Me.ResumeLayout(False)
         Me.PerformLayout()

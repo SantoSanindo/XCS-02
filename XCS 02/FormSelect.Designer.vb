@@ -220,6 +220,7 @@ Partial Class FormSelect
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Name = "FormSelect"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormSelect"
         Me.ResumeLayout(False)
         Me.PerformLayout()

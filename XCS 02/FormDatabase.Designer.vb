@@ -54,31 +54,31 @@ Partial Class FormDatabase
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox21 = New System.Windows.Forms.ComboBox()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.ComboBox15 = New System.Windows.Forms.ComboBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.ComboBox15 = New System.Windows.Forms.ComboBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.ComboBox21 = New System.Windows.Forms.ComboBox()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -423,6 +423,186 @@ Partial Class FormDatabase
         Me.GroupBox1.TabIndex = 51
         Me.GroupBox1.TabStop = False
         '
+        'ComboBox21
+        '
+        Me.ComboBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox21.FormattingEnabled = True
+        Me.ComboBox21.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox21.Location = New System.Drawing.Point(486, 366)
+        Me.ComboBox21.Name = "ComboBox21"
+        Me.ComboBox21.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox21.TabIndex = 73
+        '
+        'TextBox20
+        '
+        Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox20.Location = New System.Drawing.Point(302, 368)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox20.TabIndex = 72
+        '
+        'ComboBox20
+        '
+        Me.ComboBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox20.FormattingEnabled = True
+        Me.ComboBox20.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox20.Location = New System.Drawing.Point(486, 336)
+        Me.ComboBox20.Name = "ComboBox20"
+        Me.ComboBox20.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox20.TabIndex = 71
+        '
+        'TextBox19
+        '
+        Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox19.Location = New System.Drawing.Point(302, 338)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox19.TabIndex = 70
+        '
+        'ComboBox19
+        '
+        Me.ComboBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox19.FormattingEnabled = True
+        Me.ComboBox19.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox19.Location = New System.Drawing.Point(486, 306)
+        Me.ComboBox19.Name = "ComboBox19"
+        Me.ComboBox19.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox19.TabIndex = 69
+        '
+        'TextBox18
+        '
+        Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox18.Location = New System.Drawing.Point(302, 308)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox18.TabIndex = 68
+        '
+        'ComboBox18
+        '
+        Me.ComboBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox18.Location = New System.Drawing.Point(486, 276)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox18.TabIndex = 67
+        '
+        'TextBox17
+        '
+        Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox17.Location = New System.Drawing.Point(302, 278)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox17.TabIndex = 66
+        '
+        'ComboBox17
+        '
+        Me.ComboBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox17.FormattingEnabled = True
+        Me.ComboBox17.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox17.Location = New System.Drawing.Point(486, 246)
+        Me.ComboBox17.Name = "ComboBox17"
+        Me.ComboBox17.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox17.TabIndex = 65
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox16.Location = New System.Drawing.Point(302, 248)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox16.TabIndex = 64
+        '
+        'ComboBox16
+        '
+        Me.ComboBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox16.FormattingEnabled = True
+        Me.ComboBox16.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox16.Location = New System.Drawing.Point(486, 216)
+        Me.ComboBox16.Name = "ComboBox16"
+        Me.ComboBox16.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox16.TabIndex = 63
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox15.Location = New System.Drawing.Point(302, 218)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox15.TabIndex = 62
+        '
+        'ComboBox15
+        '
+        Me.ComboBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox15.FormattingEnabled = True
+        Me.ComboBox15.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox15.Location = New System.Drawing.Point(486, 186)
+        Me.ComboBox15.Name = "ComboBox15"
+        Me.ComboBox15.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox15.TabIndex = 61
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox14.Location = New System.Drawing.Point(302, 188)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox14.TabIndex = 60
+        '
+        'ComboBox14
+        '
+        Me.ComboBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox14.FormattingEnabled = True
+        Me.ComboBox14.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox14.Location = New System.Drawing.Point(486, 156)
+        Me.ComboBox14.Name = "ComboBox14"
+        Me.ComboBox14.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox14.TabIndex = 59
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox13.Location = New System.Drawing.Point(302, 158)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox13.TabIndex = 58
+        '
+        'ComboBox13
+        '
+        Me.ComboBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox13.FormattingEnabled = True
+        Me.ComboBox13.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox13.Location = New System.Drawing.Point(486, 126)
+        Me.ComboBox13.Name = "ComboBox13"
+        Me.ComboBox13.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox13.TabIndex = 57
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox12.Location = New System.Drawing.Point(302, 128)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox12.TabIndex = 56
+        '
+        'ComboBox12
+        '
+        Me.ComboBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox12.FormattingEnabled = True
+        Me.ComboBox12.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox12.Location = New System.Drawing.Point(486, 96)
+        Me.ComboBox12.Name = "ComboBox12"
+        Me.ComboBox12.Size = New System.Drawing.Size(41, 26)
+        Me.ComboBox12.TabIndex = 55
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox11.Location = New System.Drawing.Point(302, 98)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(178, 24)
+        Me.TextBox11.TabIndex = 54
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -473,186 +653,6 @@ Partial Class FormDatabase
         Me.Label5.TabIndex = 49
         Me.Label5.Text = "Material Type"
         '
-        'ComboBox12
-        '
-        Me.ComboBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox12.FormattingEnabled = True
-        Me.ComboBox12.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox12.Location = New System.Drawing.Point(486, 96)
-        Me.ComboBox12.Name = "ComboBox12"
-        Me.ComboBox12.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox12.TabIndex = 55
-        '
-        'TextBox11
-        '
-        Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(302, 98)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox11.TabIndex = 54
-        '
-        'ComboBox13
-        '
-        Me.ComboBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox13.FormattingEnabled = True
-        Me.ComboBox13.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox13.Location = New System.Drawing.Point(486, 126)
-        Me.ComboBox13.Name = "ComboBox13"
-        Me.ComboBox13.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox13.TabIndex = 57
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(302, 128)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox12.TabIndex = 56
-        '
-        'ComboBox14
-        '
-        Me.ComboBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox14.FormattingEnabled = True
-        Me.ComboBox14.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox14.Location = New System.Drawing.Point(486, 156)
-        Me.ComboBox14.Name = "ComboBox14"
-        Me.ComboBox14.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox14.TabIndex = 59
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(302, 158)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox13.TabIndex = 58
-        '
-        'ComboBox15
-        '
-        Me.ComboBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox15.FormattingEnabled = True
-        Me.ComboBox15.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox15.Location = New System.Drawing.Point(486, 186)
-        Me.ComboBox15.Name = "ComboBox15"
-        Me.ComboBox15.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox15.TabIndex = 61
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(302, 188)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox14.TabIndex = 60
-        '
-        'ComboBox16
-        '
-        Me.ComboBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox16.FormattingEnabled = True
-        Me.ComboBox16.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox16.Location = New System.Drawing.Point(486, 216)
-        Me.ComboBox16.Name = "ComboBox16"
-        Me.ComboBox16.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox16.TabIndex = 63
-        '
-        'TextBox15
-        '
-        Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.Location = New System.Drawing.Point(302, 218)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox15.TabIndex = 62
-        '
-        'ComboBox17
-        '
-        Me.ComboBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox17.FormattingEnabled = True
-        Me.ComboBox17.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox17.Location = New System.Drawing.Point(486, 246)
-        Me.ComboBox17.Name = "ComboBox17"
-        Me.ComboBox17.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox17.TabIndex = 65
-        '
-        'TextBox16
-        '
-        Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox16.Location = New System.Drawing.Point(302, 248)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox16.TabIndex = 64
-        '
-        'ComboBox18
-        '
-        Me.ComboBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox18.FormattingEnabled = True
-        Me.ComboBox18.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox18.Location = New System.Drawing.Point(486, 276)
-        Me.ComboBox18.Name = "ComboBox18"
-        Me.ComboBox18.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox18.TabIndex = 67
-        '
-        'TextBox17
-        '
-        Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.Location = New System.Drawing.Point(302, 278)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox17.TabIndex = 66
-        '
-        'ComboBox19
-        '
-        Me.ComboBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox19.FormattingEnabled = True
-        Me.ComboBox19.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox19.Location = New System.Drawing.Point(486, 306)
-        Me.ComboBox19.Name = "ComboBox19"
-        Me.ComboBox19.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox19.TabIndex = 69
-        '
-        'TextBox18
-        '
-        Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox18.Location = New System.Drawing.Point(302, 308)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox18.TabIndex = 68
-        '
-        'ComboBox20
-        '
-        Me.ComboBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox20.FormattingEnabled = True
-        Me.ComboBox20.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox20.Location = New System.Drawing.Point(486, 336)
-        Me.ComboBox20.Name = "ComboBox20"
-        Me.ComboBox20.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox20.TabIndex = 71
-        '
-        'TextBox19
-        '
-        Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox19.Location = New System.Drawing.Point(302, 338)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox19.TabIndex = 70
-        '
-        'ComboBox21
-        '
-        Me.ComboBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox21.FormattingEnabled = True
-        Me.ComboBox21.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox21.Location = New System.Drawing.Point(486, 366)
-        Me.ComboBox21.Name = "ComboBox21"
-        Me.ComboBox21.Size = New System.Drawing.Size(41, 26)
-        Me.ComboBox21.TabIndex = 73
-        '
-        'TextBox20
-        '
-        Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.Location = New System.Drawing.Point(302, 368)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(178, 24)
-        Me.TextBox20.TabIndex = 72
-        '
         'FormDatabase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -662,6 +662,7 @@ Partial Class FormDatabase
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "FormDatabase"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormDatabase"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
