@@ -22,6 +22,7 @@ Partial Class FormDatabase
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDatabase))
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -255,20 +256,24 @@ Partial Class FormDatabase
         '
         'Button1
         '
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Location = New System.Drawing.Point(839, 15)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(78, 76)
         Me.Button1.TabIndex = 49
         Me.Button1.Text = "Back"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Location = New System.Drawing.Point(839, 113)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(78, 76)
         Me.Button2.TabIndex = 50
         Me.Button2.Text = "Save"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button2.UseVisualStyleBackColor = True
         '
         'ComboBox11

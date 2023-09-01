@@ -1,18 +1,17 @@
-﻿Public Class FormMain
+﻿Imports System.Net
+Public Class FormMain
     Dim SlideCount As Integer
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Timer2.Enabled = True
         SlideCount = 47
-        If Dir(My.Application.Info.DirectoryPath & "\Config.INI") = "" Then
+        Dim fullPath As String = System.AppDomain.CurrentDomain.BaseDirectory
+        Dim projectFolder As String = fullPath.Replace("\XCS 02\bin\Debug\", "").Replace("\XCS 02\bin\Release\", "")
+        If Dir(projectFolder & "\Config\Config.INI") = "" Then 'This is to initalize the program during start up
             MsgBox("Config.INI is missing")
             End
         End If
 
-        If Dir(My.Application.Info.DirectoryPath & "\Setup.INI") = "" Then
-            MsgBox("Setup.INI is missing")
-            End
-        End If
-
-        ReadINI((My.Application.Info.DirectoryPath & "\Config.INI"))
+        ReadINI(projectFolder & "\Config\Config.INI")
         GetLastConfig()
 
         FormMsg.Show()
@@ -21,6 +20,12 @@
         FormModbus.Show()
         FormModbus.Hide()
         Reset_PLC()
+
+        Dim strHostName As String = Dns.GetHostName()
+        Dim hostname As IPHostEntry = Dns.GetHostByName(strHostName)
+        Dim ip As IPAddress() = hostname.AddressList
+        lbl_localhostname.Text = "PC Name : " & strHostName
+        lbl_localip.Text = "PC IP Address : " & ip(0).ToString
 
         FormMsg.TextBox1.Text = "Loading parameters..."
 
@@ -93,11 +98,11 @@
             MsgBox("Unable to communicate with PLC")
             Exit Sub
         End If
-        If Not FormModbus.tulisModbus(111, 0) Then
+        If Not FormModbus.tulisModbus(40111, 0) Then
             MsgBox("unable to communicate with PLC - %MW111")
             Exit Sub
         End If
-        If Not FormModbus.tulisModbus(112, 0) Then
+        If Not FormModbus.tulisModbus(40112, 0) Then
             MsgBox("unable to communicate with PLC - %MW112")
             Exit Sub
         End If
@@ -135,7 +140,7 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Ethernet.BackColor = Color.
         Dim Headtest_count As Integer
-        Headtest_count = FormModbus.bacaModbus(112)
+        Headtest_count = FormModbus.bacaModbus(40112)
         lbl_currcounter.Text = Headtest_count 'head tester output
         If Val(lbl_currcounter.Text) >= Val(lbl_wocounter.Text) Then
             Txt_Msg.Text = "WO COMPLETED - STOP PROCESS"
@@ -146,8 +151,8 @@
             Dim Press_count As Integer
 
             TextBox2.Text = ""
-            Station_status = FormModbus.bacaModbus(101)
-            Press_count = FormModbus.bacaModbus(111)
+            Station_status = FormModbus.bacaModbus(40101)
+            Press_count = FormModbus.bacaModbus(40111)
             Label5.Text = Press_count
 
             Ethernet.BackColor = Color.Green
@@ -168,7 +173,7 @@
                 Case 3
                 Case 4
                     Dim Test_result As Long
-                    Test_result = FormModbus.bacaModbus(102)
+                    Test_result = FormModbus.bacaModbus(40102)
                     If Test_result = 1 Then
                         Image1.Image = My.Resources.ResourceManager.GetObject("PASS")
                         Image1.SizeMode = PictureBoxSizeMode.Zoom
@@ -179,7 +184,7 @@
                         Image1.Image = My.Resources.ResourceManager.GetObject("FAIL")
                         Image1.SizeMode = PictureBoxSizeMode.Zoom
                         Dim FailType As Long
-                        FailType = FormModbus.bacaModbus(110)
+                        FailType = FormModbus.bacaModbus(40110)
                         Select Case FailType
                             Case 5
                                 Txt_Msg.Text = "--> Right Key failure"
@@ -192,7 +197,7 @@
                         End Select
                         Txt_Msg.BackColor = Color.Red
                     End If
-                    If Not FormModbus.tulisModbus(101, 10) Then
+                    If Not FormModbus.tulisModbus(40101, 10) Then
                         Txt_Msg.Text = "--> Unable to communicate with PLC - MW101"
                         Txt_Msg.BackColor = Color.Red
                     End If
@@ -202,8 +207,8 @@
         End If
     End Sub
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Dim imageFileName = INISLIDEPATH & "Slide" & SlideCount & ".JPG"
-        Image1.Image = Image.FromFile(imageFileName)
+        Dim imageFileName = INISLIDEPATH & "\Slide" & SlideCount & ".JPG"
+        PictureBox3.Image = Image.FromFile(imageFileName)
         SlideCount = SlideCount + 1
         If SlideCount = 51 Then SlideCount = 47
     End Sub
@@ -266,11 +271,11 @@
     Private Function LoadParameter2PLC() As Boolean
         On Error GoTo ErrorHandler
         If LoadWOfrRFID.JobProductMaterial = "Zamak" Then
-            If Not FormModbus.tulisModbus(100, 1) Then
+            If Not FormModbus.tulisModbus(40100, 1) Then
                 Exit Function
             End If
         Else
-            If Not FormModbus.tulisModbus(100, 0) Then
+            If Not FormModbus.tulisModbus(40100, 0) Then
                 Exit Function
             End If
         End If
@@ -289,7 +294,7 @@ ErrorHandler:
 
         For i As Integer = 1 To 30
             Part.PartNos(i) = dt.Rows(0).Item("Material" & i.ToString)
-            Part.PartPLCWord(i) = 200 + i
+            Part.PartPLCWord(i) = 40200 + i
             'Console.WriteLine(Part.PartNos(i))
             'Console.WriteLine(Part.PartPLCWord(i))
         Next
@@ -337,7 +342,7 @@ ErrorHandler:
         Return False
     End Function
     Public Sub Reset_PLC()
-        Call FormModbus.tulisModbus(500, 1)
+        Call FormModbus.tulisModbus(40500, 1)
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click

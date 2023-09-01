@@ -22,6 +22,7 @@ Partial Class FormModbus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormModbus))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtIP = New System.Windows.Forms.TextBox()
@@ -202,11 +203,13 @@ Partial Class FormModbus
         '
         'Button5
         '
+        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.Location = New System.Drawing.Point(423, 46)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 70)
         Me.Button5.TabIndex = 17
         Me.Button5.Text = "Back"
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button5.UseVisualStyleBackColor = True
         '
         'FormModbus

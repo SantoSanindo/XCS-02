@@ -94,6 +94,7 @@ Partial Class FormMain
         '
         Me.lbl_currentref.AutoSize = True
         Me.lbl_currentref.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_currentref.ForeColor = System.Drawing.Color.DarkGreen
         Me.lbl_currentref.Location = New System.Drawing.Point(214, 17)
         Me.lbl_currentref.Name = "lbl_currentref"
         Me.lbl_currentref.Size = New System.Drawing.Size(63, 20)
@@ -104,6 +105,7 @@ Partial Class FormMain
         '
         Me.lbl_wocounter.AutoSize = True
         Me.lbl_wocounter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_wocounter.ForeColor = System.Drawing.Color.DarkGreen
         Me.lbl_wocounter.Location = New System.Drawing.Point(214, 37)
         Me.lbl_wocounter.Name = "lbl_wocounter"
         Me.lbl_wocounter.Size = New System.Drawing.Size(63, 20)
@@ -115,7 +117,7 @@ Partial Class FormMain
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label3.Location = New System.Drawing.Point(559, 17)
+        Me.Label3.Location = New System.Drawing.Point(673, 17)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(121, 73)
         Me.Label3.TabIndex = 4
@@ -146,7 +148,7 @@ Partial Class FormMain
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label5.Location = New System.Drawing.Point(197, 62)
+        Me.Label5.Location = New System.Drawing.Point(208, 45)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(52, 55)
         Me.Label5.TabIndex = 7
@@ -161,7 +163,7 @@ Partial Class FormMain
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(42, 30)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(694, 100)
+        Me.GroupBox1.Size = New System.Drawing.Size(884, 100)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         '
@@ -268,7 +270,7 @@ Partial Class FormMain
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Ethernet)
         Me.GroupBox2.ForeColor = System.Drawing.Color.DarkGreen
-        Me.GroupBox2.Location = New System.Drawing.Point(35, 392)
+        Me.GroupBox2.Location = New System.Drawing.Point(35, 438)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(214, 100)
         Me.GroupBox2.TabIndex = 17
@@ -281,17 +283,18 @@ Partial Class FormMain
         '
         'CMD_Read_Inputs
         '
-        Me.CMD_Read_Inputs.Location = New System.Drawing.Point(318, 399)
+        Me.CMD_Read_Inputs.Location = New System.Drawing.Point(318, 445)
         Me.CMD_Read_Inputs.Name = "CMD_Read_Inputs"
         Me.CMD_Read_Inputs.Size = New System.Drawing.Size(44, 50)
         Me.CMD_Read_Inputs.TabIndex = 20
         Me.CMD_Read_Inputs.Text = "Read PLC"
         Me.CMD_Read_Inputs.UseVisualStyleBackColor = True
+        Me.CMD_Read_Inputs.Visible = False
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(255, 464)
+        Me.Label13.Location = New System.Drawing.Point(255, 510)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(59, 13)
         Me.Label13.TabIndex = 21
@@ -299,7 +302,7 @@ Partial Class FormMain
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(318, 461)
+        Me.TextBox2.Location = New System.Drawing.Point(318, 507)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(44, 20)
         Me.TextBox2.TabIndex = 22
@@ -319,7 +322,7 @@ Partial Class FormMain
         Me.GroupBox3.Controls.Add(Me.Image1)
         Me.GroupBox3.Location = New System.Drawing.Point(42, 138)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(396, 512)
+        Me.GroupBox3.Size = New System.Drawing.Size(396, 567)
         Me.GroupBox3.TabIndex = 23
         Me.GroupBox3.TabStop = False
         '
@@ -328,7 +331,7 @@ Partial Class FormMain
         Me.lbl_currcounter.AutoSize = True
         Me.lbl_currcounter.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_currcounter.ForeColor = System.Drawing.Color.DarkGreen
-        Me.lbl_currcounter.Location = New System.Drawing.Point(484, 200)
+        Me.lbl_currcounter.Location = New System.Drawing.Point(600, 183)
         Me.lbl_currcounter.Name = "lbl_currcounter"
         Me.lbl_currcounter.Size = New System.Drawing.Size(52, 55)
         Me.lbl_currcounter.TabIndex = 25
@@ -339,7 +342,7 @@ Partial Class FormMain
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label15.Location = New System.Drawing.Point(459, 163)
+        Me.Label15.Location = New System.Drawing.Point(536, 163)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(168, 20)
         Me.Label15.TabIndex = 24
@@ -347,13 +350,15 @@ Partial Class FormMain
         '
         'Timer2
         '
+        Me.Timer2.Interval = 5000
         '
         'PictureBox3
         '
         Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Location = New System.Drawing.Point(453, 262)
+        Me.PictureBox3.Location = New System.Drawing.Point(453, 252)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(335, 388)
+        Me.PictureBox3.Size = New System.Drawing.Size(511, 453)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 26
         Me.PictureBox3.TabStop = False
         '
@@ -409,7 +414,7 @@ Partial Class FormMain
         'Command1
         '
         Me.Command1.Image = CType(resources.GetObject("Command1.Image"), System.Drawing.Image)
-        Me.Command1.Location = New System.Drawing.Point(41, 515)
+        Me.Command1.Location = New System.Drawing.Point(41, 572)
         Me.Command1.Name = "Command1"
         Me.Command1.Size = New System.Drawing.Size(86, 68)
         Me.Command1.TabIndex = 34
@@ -424,9 +429,9 @@ Partial Class FormMain
         Me.GroupBox4.Controls.Add(Me.cmd_database)
         Me.GroupBox4.Controls.Add(Me.cmd_material)
         Me.GroupBox4.Controls.Add(Me.cmd_quit)
-        Me.GroupBox4.Location = New System.Drawing.Point(814, 30)
+        Me.GroupBox4.Location = New System.Drawing.Point(984, 30)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(155, 620)
+        Me.GroupBox4.Size = New System.Drawing.Size(155, 675)
         Me.GroupBox4.TabIndex = 35
         Me.GroupBox4.TabStop = False
         '
@@ -434,7 +439,7 @@ Partial Class FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(982, 681)
+        Me.ClientSize = New System.Drawing.Size(1163, 734)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.lbl_currcounter)

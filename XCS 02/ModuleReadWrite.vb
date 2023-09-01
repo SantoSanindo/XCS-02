@@ -2,7 +2,6 @@
 Module ModuleReadWrite
     Public INISTATUSPATH As String 'PATH TO SERVER\FRIDGE .
     Public INIPSNFOLDERPATH As String 'Path to the PSN.Txt .
-    Public INITEMPPATH As String '.
     Public INISLIDEPATH As String '.
 
     Dim Fnum As Integer
@@ -14,7 +13,7 @@ Module ModuleReadWrite
 
         Fnum = FreeFile()
 
-        FileOpen(Fnum, My.Application.Info.DirectoryPath & "\Config.ini", OpenMode.Input)
+        FileOpen(Fnum, Filename, OpenMode.Input)
 
         Do While Not EOF(Fnum)
             LineStr = LineInput(Fnum)
@@ -29,11 +28,6 @@ Module ModuleReadWrite
                         Case "PSN FOLDER PATH" 'Share FILE
                             Select Case UCase(ItemStr)
                                 Case "PATH" : INIPSNFOLDERPATH = Mid$(LineStr, pos + 1)
-                            End Select
-
-                        Case "TEMP PATH" 'LOCAL DIR
-                            Select Case UCase(ItemStr)
-                                Case "PATH" : INITEMPPATH = Mid$(LineStr, pos + 1)
                             End Select
 
                         Case "SLIDE PATH"
