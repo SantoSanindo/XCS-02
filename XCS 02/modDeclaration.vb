@@ -1,6 +1,6 @@
 ﻿Option Explicit On
 
-Module ModuleDeclaration
+Module modDeclaration
     Public LoginDatabase, LoginMaterial As Boolean
     Public Parameter As ControlSpec
     Public LoadWOfrRFID As JobOrder

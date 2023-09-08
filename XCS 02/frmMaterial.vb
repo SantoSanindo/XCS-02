@@ -1,12 +1,12 @@
 ﻿Imports System.Data.SqlClient
-Public Class FormMaterial
+Public Class frmMaterial
     Private Sub FormMaterial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadLocalParameter()
 
     End Sub
     Private Sub LoadLocalParameter()
         Dim query = "Select * from RackMaterial WHERE MaterialList = '" & "SubAssy1" & "'"
-        Dim dt = ModuleKoneksiDB.bacaData(query).Tables(0)
+        Dim dt = KoneksiDB.bacaData(query).Tables(0)
 
         TextBox1.Text = dt.Rows(0).Item("Material1")
         TextBox2.Text = dt.Rows(0).Item("Material2")

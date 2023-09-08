@@ -1,5 +1,5 @@
 ﻿Option Explicit On
-Module ModuleReadWrite
+Module modReadWrite
     Public INISTATUSPATH As String 'PATH TO SERVER\FRIDGE .
     Public INIPSNFOLDERPATH As String 'Path to the PSN.Txt .
     Public INISLIDEPATH As String '.

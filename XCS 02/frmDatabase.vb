@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class FormDatabase
+Public Class frmDatabase
     Private Sub FormDatabase_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadRefCombo()
 
@@ -16,7 +16,7 @@ Public Class FormDatabase
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         If ComboBox1.Text = "" Then Exit Sub
         Dim query = "Select * from Record WHERE MaterialType = '" & ComboBox1.Text & "'"
-        Dim dt = ModuleKoneksiDB.bacaData(query).Tables(0)
+        Dim dt = KoneksiDB.bacaData(query).Tables(0)
         TextBox1.Text = dt.Rows(0).Item("Part1")
         TextBox2.Text = dt.Rows(0).Item("Part2")
         TextBox3.Text = dt.Rows(0).Item("Part3")

@@ -1,4 +1,4 @@
-﻿Public Class FormSelect
+﻿Public Class frmSelect
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TextBox1.Text = TextBox1.Text & "1"
     End Sub
@@ -56,12 +56,12 @@
 
         LoadWOfrRFID.JobProductMaterial = ComboBox1.Text
         LoadWOfrRFID.JobQTy = TextBox1.Text
-        FormMain.lbl_currcounter.Text = "0"
-        LoadWOfrRFID.JobHeadCount = FormMain.lbl_currcounter.Text
-        FormMain.Label5.Text = "0"
-        LoadWOfrRFID.JobUnitaryCount = FormMain.Label5.Text
-        FormMain.lbl_currentref.Text = LoadWOfrRFID.JobProductMaterial
-        FormMain.lbl_wocounter.Text = LoadWOfrRFID.JobQTy
+        frmMain.lbl_currcounter.Text = "0"
+        LoadWOfrRFID.JobHeadCount = frmMain.lbl_currcounter.Text
+        frmMain.Label5.Text = "0"
+        LoadWOfrRFID.JobUnitaryCount = frmMain.Label5.Text
+        frmMain.lbl_currentref.Text = LoadWOfrRFID.JobProductMaterial
+        frmMain.lbl_wocounter.Text = LoadWOfrRFID.JobQTy
         UpdateStnStatus()
         Me.Hide()
     End Sub

@@ -1,6 +1,6 @@
 ﻿Option Explicit On
 Imports System.Threading
-Module ModuleRFID
+Module RFID
 	Public Function ReadTagChkUpStream() As Boolean
 		Dim RdInfo As String
 
@@ -342,22 +342,22 @@ READRETRY:
 			SendString(i) = CByte(ii(i))
 		Next
 
-		FormMain.RFID_Comm.Write(SendString, 0, SendString.Length)
+		frmMain.RFID_Comm.Write(SendString, 0, SendString.Length)
 		Thread.Sleep(20)
 		GoTo READINBYTE
 
 READINBYTE:
 		Str1 = ""
-		If FormMain.RFID_Comm.BytesToRead = 0 Then GoTo READ_RFID_TIMEOUT
+		If frmMain.RFID_Comm.BytesToRead = 0 Then GoTo READ_RFID_TIMEOUT
 		Thread.Sleep(10)
-		Bcount = FormMain.RFID_Comm.BytesToRead
+		Bcount = frmMain.RFID_Comm.BytesToRead
 		Do
-			Str2 = FormMain.RFID_Comm.ReadExisting()
+			Str2 = frmMain.RFID_Comm.ReadExisting()
 			n = n + 1
 			Str2 = Asc(Str2)
 			Str1 = Str1 + Trim(Str(Str2)) + "," 'Build the string received frm OsiTrack
 		Loop Until n = Bcount
-		FormMain.Txt_Msg.Text = Str1 'Display the string received
+		frmMain.Txt_Msg.Text = Str1 'Display the string received
 		t1 = InStr(1, Str1, ",")
 		t2 = InStr(t1 + 1, Str1, ",")
 		t3 = InStr(t2 + 1, Str1, ",")
@@ -491,17 +491,17 @@ WRITERETRY:
 			SendString(i) = CByte(ii(i))
 		Next
 
-		FormMain.RFID_Comm.Write(SendString, 0, SendString.Length)
+		frmMain.RFID_Comm.Write(SendString, 0, SendString.Length)
 		Thread.Sleep(20)
 		GoTo CHECKINBYTE
 
 CHECKINBYTE:
-		If FormMain.RFID_Comm.BytesToRead = 0 Then GoTo WRITE_COMM_TIMEOUT
+		If frmMain.RFID_Comm.BytesToRead = 0 Then GoTo WRITE_COMM_TIMEOUT
 		Thread.Sleep(10)
-		Bcount = FormMain.RFID_Comm.BytesToRead
+		Bcount = frmMain.RFID_Comm.BytesToRead
 		Str1 = ""
 		Do
-			Str2 = FormMain.RFID_Comm.ReadExisting()
+			Str2 = frmMain.RFID_Comm.ReadExisting()
 			n = n + 1
 			Str2 = Asc(Str2)
 			Str1 = Str1 + Trim(Str(Str2)) + ","
@@ -587,17 +587,17 @@ WRITERETRY:
 			SendString(i) = CByte(ii(i))
 		Next
 
-		FormMain.RFID_Comm.Write(SendString, 0, SendString.Length)
+		frmMain.RFID_Comm.Write(SendString, 0, SendString.Length)
 		Thread.Sleep(20)
 		GoTo CHECKINBYTE
 
 CHECKINBYTE:
-		If FormMain.RFID_Comm.BytesToRead = 0 Then GoTo WRITE_COMM_TIMEOUT
+		If frmMain.RFID_Comm.BytesToRead = 0 Then GoTo WRITE_COMM_TIMEOUT
 		Thread.Sleep(50)
-		Bcount = FormMain.RFID_Comm.BytesToRead
+		Bcount = frmMain.RFID_Comm.BytesToRead
 		Str1 = ""
 		Do
-			Str2 = FormMain.RFID_Comm.ReadExisting()
+			Str2 = frmMain.RFID_Comm.ReadExisting()
 			n = n + 1
 			Str2 = Asc(Str2)
 			Str1 = Str1 + Trim(Str(Str2)) + ","
@@ -677,17 +677,17 @@ READRETRY:
 			SendString(i) = CByte(ii(i))
 		Next
 
-		FormMain.RFID_Comm.Write(SendString, 0, SendString.Length)
+		frmMain.RFID_Comm.Write(SendString, 0, SendString.Length)
 		Thread.Sleep(20)
 		GoTo READ_RFID_TIMEOUT
 
 READINBYTE:
 		Str1 = ""
-		If FormMain.RFID_Comm.BytesToRead = 0 Then GoTo READ_RFID_TIMEOUT
+		If frmMain.RFID_Comm.BytesToRead = 0 Then GoTo READ_RFID_TIMEOUT
 		Thread.Sleep(10)
-		Bcount = FormMain.RFID_Comm.BytesToRead
+		Bcount = frmMain.RFID_Comm.BytesToRead
 		Do
-			Str2 = FormMain.RFID_Comm.ReadExisting()
+			Str2 = frmMain.RFID_Comm.ReadExisting()
 			'If Str2 = "" Then GoTo skip
 			n = n + 1
 			Str2 = Asc(Str2)

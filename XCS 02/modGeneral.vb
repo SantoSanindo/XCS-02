@@ -1,10 +1,11 @@
-﻿Module ModuleGeneral
+﻿Module modGeneral
     Public Sub GetLastConfig()
         Dim Filenum As Integer
         Filenum = FreeFile()
         Dim tempcode As String
         Dim pos1, pos2, pos3, pos4, pos5 As Integer
 
+        Console.WriteLine(INISTATUSPATH)
         FileOpen(Filenum, INISTATUSPATH, OpenMode.Input)
 
         tempcode = LineInput(Filenum)
@@ -19,6 +20,8 @@
         LoadWOfrRFID.JobQTy = Mid(tempcode, pos1 + 1, (pos2 - pos1) - 1)
         LoadWOfrRFID.JobHeadCount = Mid(tempcode, pos2 + 1, (pos3 - pos2) - 1)
         LoadWOfrRFID.JobUnitaryCount = Mid(tempcode, pos3 + 1)
+
+        Console.WriteLine()
     End Sub
     Public Function UpdateStnStatus() As Boolean
         Dim Filenum1 As Integer

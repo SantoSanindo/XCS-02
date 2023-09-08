@@ -11,9 +11,10 @@
     <AssemblyName>XCS 02</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -76,59 +77,60 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormDatabase.Designer.vb">
-      <DependentUpon>FormDatabase.vb</DependentUpon>
+    <Compile Include="frmDatabase.Designer.vb">
+      <DependentUpon>frmDatabase.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormDatabase.vb">
+    <Compile Include="frmDatabase.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.vb">
-      <DependentUpon>FormLogin.vb</DependentUpon>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.vb">
+    <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.vb">
+    <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.vb">
-      <DependentUpon>FormMain.vb</DependentUpon>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMaterial.Designer.vb">
-      <DependentUpon>FormMaterial.vb</DependentUpon>
+    <Compile Include="frmMaterial.Designer.vb">
+      <DependentUpon>frmMaterial.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormMaterial.vb">
+    <Compile Include="frmMaterial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormModbus.Designer.vb">
-      <DependentUpon>FormModbus.vb</DependentUpon>
+    <Compile Include="frmModbus.Designer.vb">
+      <DependentUpon>frmModbus.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormModbus.vb">
+    <Compile Include="frmModbus.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMsg.Designer.vb">
-      <DependentUpon>FormMsg.vb</DependentUpon>
+    <Compile Include="frmMsg.Designer.vb">
+      <DependentUpon>frmMsg.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormMsg.vb">
+    <Compile Include="frmMsg.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSelect.Designer.vb">
-      <DependentUpon>FormSelect.vb</DependentUpon>
+    <Compile Include="frmSelect.Designer.vb">
+      <DependentUpon>frmSelect.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormSelect.vb">
+    <Compile Include="frmSelect.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleDeclaration.vb" />
-    <Compile Include="ModuleGeneral.vb" />
-    <Compile Include="ModuleKoneksiDB.vb" />
-    <Compile Include="ModuleReadWrite.vb" />
-    <Compile Include="ModuleRFID.vb" />
+    <Compile Include="modDeclaration.vb" />
+    <Compile Include="modGeneral.vb" />
+    <Compile Include="KoneksiDB.vb" />
+    <Compile Include="modReadWrite.vb" />
+    <Compile Include="RFID.vb" />
     <Compile Include="ModuleZebraUSB.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -142,26 +144,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormDatabase.resx">
-      <DependentUpon>FormDatabase.vb</DependentUpon>
+    <EmbeddedResource Include="frmDatabase.resx">
+      <DependentUpon>frmDatabase.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.vb</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.vb</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMaterial.resx">
-      <DependentUpon>FormMaterial.vb</DependentUpon>
+    <EmbeddedResource Include="frmMaterial.resx">
+      <DependentUpon>frmMaterial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormModbus.resx">
-      <DependentUpon>FormModbus.vb</DependentUpon>
+    <EmbeddedResource Include="frmModbus.resx">
+      <DependentUpon>frmModbus.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMsg.resx">
-      <DependentUpon>FormMsg.vb</DependentUpon>
+    <EmbeddedResource Include="frmMsg.resx">
+      <DependentUpon>frmMsg.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSelect.resx">
-      <DependentUpon>FormSelect.vb</DependentUpon>
+    <EmbeddedResource Include="frmSelect.resx">
+      <DependentUpon>frmSelect.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormDatabase
+Partial Class frmDatabase
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class FormDatabase
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDatabase))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDatabase))
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -658,7 +658,7 @@ Partial Class FormDatabase
         Me.Label5.TabIndex = 49
         Me.Label5.Text = "Material Type"
         '
-        'FormDatabase
+        'frmDatabase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -666,9 +666,9 @@ Partial Class FormDatabase
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Name = "FormDatabase"
+        Me.Name = "frmDatabase"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormDatabase"
+        Me.Text = "Database"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

@@ -1,5 +1,5 @@
 ﻿Imports System.Net
-Public Class FormMain
+Public Class frmMain
     Dim SlideCount As Integer
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer2.Enabled = True
@@ -14,11 +14,12 @@ Public Class FormMain
         ReadINI(projectFolder & "\Config\Config.INI")
         GetLastConfig()
 
-        FormMsg.Show()
-        FormMsg.TextBox1.Text = "Establishing connection with PLC..."
+        frmMsg.Show()
+        frmMsg.TextBox1.Text = "Establishing connection with PLC..."
 
-        FormModbus.Show()
-        FormModbus.Hide()
+        frmModbus.Show()
+        frmModbus.Hide()
+        System.Threading.Thread.Sleep(10)
         Reset_PLC()
 
         Dim strHostName As String = Dns.GetHostName()
@@ -27,7 +28,7 @@ Public Class FormMain
         lbl_localhostname.Text = "PC Name : " & strHostName
         lbl_localip.Text = "PC IP Address : " & ip(0).ToString
 
-        FormMsg.TextBox1.Text = "Loading parameters..."
+        frmMsg.TextBox1.Text = "Loading parameters..."
 
         If Not LoadParameter(LoadWOfrRFID.JobModelName) Then
             MsgBox("Unable to load parameters...")
@@ -38,7 +39,6 @@ Public Class FormMain
         lbl_wocounter.Text = LoadWOfrRFID.JobQTy
         Label5.Text = LoadWOfrRFID.JobHeadCount
         lbl_currcounter.Text = LoadWOfrRFID.JobUnitaryCount 'head tester output
-
 
         If Not LoadParameter2PLC() Then
             MsgBox("Unable to communication with PLC-%MW100")
@@ -55,18 +55,18 @@ Public Class FormMain
             End
         End If
 
-        FormMsg.TextBox1.Text = "Refreshing indicators..."
+        frmMsg.TextBox1.Text = "Refreshing indicators..."
 
         If Not ActivateRackLED() Then
             MsgBox("Unable to communicate with PLC")
             End
         End If
 
-        FormMsg.TextBox1.Text = "Connection to PLC established"
-        FormMsg.Hide()
+        frmMsg.TextBox1.Text = "Connection to PLC established"
+        frmMsg.Hide()
         Ethernet.BackColor = Color.Green
 
-        If FormModbus.lbl_status.Text <> "Connected" Then
+        If frmModbus.lbl_status.Text <> "Connected" Then
             Ethernet.BackColor = Color.Red
             Exit Sub
         End If
@@ -82,27 +82,27 @@ Public Class FormMain
         LoginMaterial = True
         LoginDatabase = False
         'FormLogin.Show()
-        FormMaterial.Show()
+        frmMaterial.Show()
     End Sub
 
     Private Sub cmd_database_Click(sender As Object, e As EventArgs) Handles cmd_database.Click
         LoginMaterial = False
         LoginDatabase = True
         'FormLogin.Show()
-        FormDatabase.Show()
+        frmDatabase.Show()
     End Sub
 
     Private Sub Cmd_CS_Click(sender As Object, e As EventArgs) Handles Cmd_CS.Click
-        FormSelect.Show()
+        frmSelect.Show()
         If Not LoadParameter2PLC() Then
             MsgBox("Unable to communicate with PLC")
             Exit Sub
         End If
-        If Not FormModbus.tulisModbus(40111, 0) Then
+        If Not frmModbus.tulisModbus(40111, 0) Then
             MsgBox("unable to communicate with PLC - %MW111")
             Exit Sub
         End If
-        If Not FormModbus.tulisModbus(40112, 0) Then
+        If Not frmModbus.tulisModbus(40112, 0) Then
             MsgBox("unable to communicate with PLC - %MW112")
             Exit Sub
         End If
@@ -120,13 +120,13 @@ Public Class FormMain
             MsgBox("Unable to communicate with PLC")
             Exit Sub
         End If
-        'lbl_currcounter.Text = "0"
-        'LoadWOfrRFID.JobHeadCount = lbl_currcounter.Text
-        'Label5.Text = 0
-        'LoadWOfrRFID.JobUnitaryCount = Label5.Text
-        'lbl_currentref.Text = LoadWOfrRFID.JobProductMaterial
-        'lbl_wocounter.Text = LoadWOfrRFID.JobQTy
-        'UpdateStnStatus()
+        lbl_currcounter.Text = "0"
+        LoadWOfrRFID.JobHeadCount = lbl_currcounter.Text
+        Label5.Text = 0
+        LoadWOfrRFID.JobUnitaryCount = Label5.Text
+        lbl_currentref.Text = LoadWOfrRFID.JobProductMaterial
+        lbl_wocounter.Text = LoadWOfrRFID.JobQTy
+        UpdateStnStatus()
     End Sub
 
     Private Sub Command1_Click(sender As Object, e As EventArgs) Handles Command1.Click
@@ -140,7 +140,7 @@ Public Class FormMain
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Ethernet.BackColor = Color.
         Dim Headtest_count As Integer
-        Headtest_count = FormModbus.bacaModbus(40112)
+        Headtest_count = frmModbus.bacaModbus(40112)
         lbl_currcounter.Text = Headtest_count 'head tester output
         If Val(lbl_currcounter.Text) >= Val(lbl_wocounter.Text) Then
             Txt_Msg.Text = "WO COMPLETED - STOP PROCESS"
@@ -151,8 +151,8 @@ Public Class FormMain
             Dim Press_count As Integer
 
             TextBox2.Text = ""
-            Station_status = FormModbus.bacaModbus(40101)
-            Press_count = FormModbus.bacaModbus(40111)
+            Station_status = frmModbus.bacaModbus(40101)
+            Press_count = frmModbus.bacaModbus(40111)
             Label5.Text = Press_count
 
             Ethernet.BackColor = Color.Green
@@ -173,7 +173,7 @@ Public Class FormMain
                 Case 3
                 Case 4
                     Dim Test_result As Long
-                    Test_result = FormModbus.bacaModbus(40102)
+                    Test_result = frmModbus.bacaModbus(40102)
                     If Test_result = 1 Then
                         Image1.Image = My.Resources.ResourceManager.GetObject("PASS")
                         Image1.SizeMode = PictureBoxSizeMode.Zoom
@@ -184,7 +184,7 @@ Public Class FormMain
                         Image1.Image = My.Resources.ResourceManager.GetObject("FAIL")
                         Image1.SizeMode = PictureBoxSizeMode.Zoom
                         Dim FailType As Long
-                        FailType = FormModbus.bacaModbus(40110)
+                        FailType = frmModbus.bacaModbus(40110)
                         Select Case FailType
                             Case 5
                                 Txt_Msg.Text = "--> Right Key failure"
@@ -197,7 +197,7 @@ Public Class FormMain
                         End Select
                         Txt_Msg.BackColor = Color.Red
                     End If
-                    If Not FormModbus.tulisModbus(40101, 10) Then
+                    If Not frmModbus.tulisModbus(40101, 10) Then
                         Txt_Msg.Text = "--> Unable to communicate with PLC - MW101"
                         Txt_Msg.BackColor = Color.Red
                     End If
@@ -210,7 +210,7 @@ Public Class FormMain
         Dim imageFileName = INISLIDEPATH & "\Slide" & SlideCount & ".JPG"
         PictureBox3.Image = Image.FromFile(imageFileName)
         SlideCount = SlideCount + 1
-        If SlideCount = 51 Then SlideCount = 47
+        If SlideCount = 52 Then SlideCount = 47
     End Sub
 
     Private Sub CMD_Read_Inputs_Click(sender As Object, e As EventArgs) Handles CMD_Read_Inputs.Click
@@ -260,7 +260,7 @@ Public Class FormMain
     End Function
     Private Function LoadParameter(csmodel As String) As Boolean
         Dim query = "Select * FROM Parameter WHERE ModelName = '" & csmodel & "'"
-        Dim dt = ModuleKoneksiDB.bacaData(query).Tables(0)
+        Dim dt = KoneksiDB.bacaData(query).Tables(0)
         On Error Resume Next
 
         LoadWOfrRFID.JobArticle = "" & dt.Rows(0).Item("ArticleNos")
@@ -271,11 +271,11 @@ Public Class FormMain
     Private Function LoadParameter2PLC() As Boolean
         On Error GoTo ErrorHandler
         If LoadWOfrRFID.JobProductMaterial = "Zamak" Then
-            If Not FormModbus.tulisModbus(40100, 1) Then
+            If Not frmModbus.tulisModbus(40100, 1) Then
                 Exit Function
             End If
         Else
-            If Not FormModbus.tulisModbus(40100, 0) Then
+            If Not frmModbus.tulisModbus(40100, 0) Then
                 Exit Function
             End If
         End If
@@ -287,7 +287,7 @@ ErrorHandler:
     Dim Part As Rackconfig
     Private Function LoadRackMaterial() As Boolean
         Dim query = "Select * FROM RackMaterial WHERE MaterialList = 'SubAssy1'"
-        Dim dt = ModuleKoneksiDB.bacaData(query).Tables(0)
+        Dim dt = KoneksiDB.bacaData(query).Tables(0)
 
         ReDim Part.PartPLCWord(30)
         ReDim Part.PartNos(30)
@@ -309,7 +309,7 @@ ErrorHandler:
 
         ReDim JobModelMaterial.JobModelMaterial(30)
         Dim query = "Select * From Record Where MaterialType = '" & Unitname & "'"
-        Dim dt = ModuleKoneksiDB.bacaData(query).Tables(0)
+        Dim dt = KoneksiDB.bacaData(query).Tables(0)
         Dim data As Integer
         For i As Integer = 1 To 15
             data = dt.Rows(0).Item("Flag" & i.ToString)
@@ -330,7 +330,7 @@ ErrorHandler:
                 For N = 0 To 29
                     If JobModelMaterial.JobModelMaterial(i) = Part.PartNos(N) Then
                         'Console.WriteLine(Part.PartPLCWord(N))
-                        If Not FormModbus.tulisModbus(Part.PartPLCWord(N), 1) Then
+                        If Not frmModbus.tulisModbus(Part.PartPLCWord(N), 1) Then
                             GoTo ErrorHandler
                         End If
                     End If
@@ -342,7 +342,7 @@ ErrorHandler:
         Return False
     End Function
     Public Sub Reset_PLC()
-        Call FormModbus.tulisModbus(40500, 1)
+        Call frmModbus.tulisModbus(40500, 1)
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click

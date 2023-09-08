@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class FormLogin
+Public Class frmLogin
     Dim enterPressed As Integer = 0
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If enterPressed = 0 Then
@@ -337,14 +337,14 @@ Public Class FormLogin
             Exit Sub
         End If
         Dim query = "Select * from [USER] where USER_ID ='" & TextBox1.Text & "'"
-        Dim dt = ModuleKoneksiDB.bacaData(query).Tables(0)
+        Dim dt = KoneksiDB.bacaData(query).Tables(0)
 
         Try
             If UCase(TextBox2.Text) = UCase(dt.Rows(0).Item("USER_PASSWORD")) Then
                 If LoginMaterial Then
-                    FormMaterial.Show()
+                    frmMaterial.Show()
                 ElseIf LoginDatabase Then
-                    FormDatabase.Show()
+                    frmDatabase.Show()
                 End If
                 Me.Hide()
             Else

@@ -1,5 +1,5 @@
 ﻿Imports EasyModbus
-Public Class FormModbus
+Public Class frmModbus
     Dim modbusClient As ModbusClient
 
     Public Function bacaModbus(addrs As Integer) As Integer

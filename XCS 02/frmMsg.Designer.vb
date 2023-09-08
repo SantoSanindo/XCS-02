@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormMsg
+Partial Class frmMsg
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -35,15 +35,15 @@ Partial Class FormMsg
         Me.TextBox1.Size = New System.Drawing.Size(456, 277)
         Me.TextBox1.TabIndex = 0
         '
-        'FormMsg
+        'frmMsg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(480, 301)
         Me.Controls.Add(Me.TextBox1)
-        Me.Name = "FormMsg"
+        Me.Name = "frmMsg"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormMsg"
+        Me.Text = "Msg"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

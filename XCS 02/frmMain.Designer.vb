@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormMain
+Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class FormMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_currentref = New System.Windows.Forms.Label()
@@ -200,12 +200,12 @@ Partial Class FormMain
         '
         'lbl_msg
         '
-        Me.lbl_msg.AutoSize = True
+        Me.lbl_msg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_msg.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_msg.ForeColor = System.Drawing.Color.Red
-        Me.lbl_msg.Location = New System.Drawing.Point(31, 353)
+        Me.lbl_msg.Location = New System.Drawing.Point(35, 349)
         Me.lbl_msg.Name = "lbl_msg"
-        Me.lbl_msg.Size = New System.Drawing.Size(143, 20)
+        Me.lbl_msg.Size = New System.Drawing.Size(327, 82)
         Me.lbl_msg.TabIndex = 12
         Me.lbl_msg.Text = "Please load head..."
         '
@@ -435,7 +435,7 @@ Partial Class FormMain
         Me.GroupBox4.TabIndex = 35
         Me.GroupBox4.TabStop = False
         '
-        'FormMain
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -446,8 +446,9 @@ Partial Class FormMain
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "FormMain"
+        Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Sub Assembly 2 - Developed by SESEA"
         CType(Me.Image1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

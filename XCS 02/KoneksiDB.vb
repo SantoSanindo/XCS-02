@@ -1,7 +1,14 @@
 ﻿Imports System.Data.SqlClient
-Module ModuleKoneksiDB
+Module KoneksiDB
     Public Function Database() As String
-        Dim db As String = "Data Source=WTID103263119DP\SQLEXPRESS;initial catalog=TESE;integrated security=True"
+        Dim db As String = "Data Source=192.168.1.188\SQLEXPRESS;
+            initial catalog=TESE;
+            Persist Security Info=True;
+            User ID=tese;
+            Password=Sanindo123;
+            Connect Timeout=15000;
+            Max Pool Size=15000;
+            Pooling=True"
         Return db
     End Function
 

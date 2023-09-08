@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormLogin
+Partial Class frmLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -503,7 +503,7 @@ Partial Class FormLogin
         Me.Label2.TabIndex = 43
         Me.Label2.Text = "PASSWORD"
         '
-        'FormLogin
+        'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -552,9 +552,9 @@ Partial Class FormLogin
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
-        Me.Name = "FormLogin"
+        Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormLogin"
+        Me.Text = "User Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
