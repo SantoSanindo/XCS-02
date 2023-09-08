@@ -212,7 +212,7 @@ Partial Class frmModbus
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'FormModbus
+        'frmModbus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -235,7 +235,8 @@ Partial Class frmModbus
         Me.Controls.Add(Me.txtIP)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "FormModbus"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "frmModbus"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormModbus"
         Me.ResumeLayout(False)
