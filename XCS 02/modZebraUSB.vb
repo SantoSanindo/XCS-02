@@ -1,4 +1,4 @@
-﻿Module ModuleZebraUSB
+﻿Module modZebraUSB
     Public sWrittendata As String
     Public Structure DOCINFO
         Dim pDocName As String

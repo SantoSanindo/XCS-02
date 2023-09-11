@@ -208,7 +208,6 @@ Public Class frmMain
         SlideCount = SlideCount + 1
         If SlideCount = 52 Then SlideCount = 47
     End Sub
-
     Private Sub CMD_Read_Inputs_Click(sender As Object, e As EventArgs) Handles CMD_Read_Inputs.Click
         Call ZbrPrinter("123456001091100001")
     End Sub
@@ -228,7 +227,7 @@ Public Class frmMain
 
         sPrinterName = "Zebra TLP2844-Z"
         'lReturn = OpenPrinter(Printer.DeviceName, lhPrinter, 0)
-        lReturn = ModuleZebraUSB.OpenPrinter(sPrinterName, lhPrinter, 0)
+        lReturn = modZebraUSB.OpenPrinter(sPrinterName, lhPrinter, 0)
         If lReturn = 0 Then
             MsgBox("The Printer Name you typed wasn't recognised.")
             Exit Function
@@ -236,22 +235,22 @@ Public Class frmMain
         MyDocInfo.pDocName = "Servo 3"
         MyDocInfo.pOutputFile = vbNullString
         MyDocInfo.pDatatype = vbNullString
-        lDoc = ModuleZebraUSB.StartDocPrinter(lhPrinter, 1, MyDocInfo)
-        Call ModuleZebraUSB.StartPagePrinter(lhPrinter)
+        lDoc = modZebraUSB.StartDocPrinter(lhPrinter, 1, MyDocInfo)
+        Call modZebraUSB.StartPagePrinter(lhPrinter)
         'sWrittendata = "^XA^FO370,60^A0,10,15^FD" & "1234567890" & "^FS^FO310,40^BXN,5,400^FD" & "12345" & "^FS^XZ"
         sWrittendata = "^XA^FO360,50^A0,15,15^FD" & SerialNos & "^FS^FO300,35^BXN,3,200^FD" & SerialNos & "^FS^XZ"
         'Call PrintPSN(sWrittendata)
-        lReturn = ModuleZebraUSB.WritePrinter(lhPrinter, sWrittendata, Len(sWrittendata), lpcWritten)
+        lReturn = modZebraUSB.WritePrinter(lhPrinter, sWrittendata, Len(sWrittendata), lpcWritten)
 
         ' read data
         Dim sReadData As String
         Dim lpcRead As Long
 
-        lReturn = ModuleZebraUSB.ReadPrinter(lhPrinter, sReadData, Len(sReadData), lpcRead)
+        lReturn = modZebraUSB.ReadPrinter(lhPrinter, sReadData, Len(sReadData), lpcRead)
 
-        lReturn = ModuleZebraUSB.EndPagePrinter(lhPrinter)
-        lReturn = ModuleZebraUSB.EndDocPrinter(lhPrinter)
-        lReturn = ModuleZebraUSB.ClosePrinter(lhPrinter)
+        lReturn = modZebraUSB.EndPagePrinter(lhPrinter)
+        lReturn = modZebraUSB.EndDocPrinter(lhPrinter)
+        lReturn = modZebraUSB.ClosePrinter(lhPrinter)
         '=======================================
     End Function
     Private Function LoadParameter(csmodel As String) As Boolean

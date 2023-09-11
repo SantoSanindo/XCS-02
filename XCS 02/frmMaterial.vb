@@ -8,36 +8,14 @@ Public Class frmMaterial
         Dim query = "Select * from RackMaterial WHERE MaterialList = '" & "SubAssy1" & "'"
         Dim dt = KoneksiDB.bacaData(query).Tables(0)
 
-        TextBox1.Text = dt.Rows(0).Item("Material1")
-        TextBox2.Text = dt.Rows(0).Item("Material2")
-        TextBox3.Text = dt.Rows(0).Item("Material3")
-        TextBox4.Text = dt.Rows(0).Item("Material4")
-        TextBox5.Text = dt.Rows(0).Item("Material5")
-        TextBox6.Text = dt.Rows(0).Item("Material6")
-        TextBox7.Text = dt.Rows(0).Item("Material7")
-        TextBox8.Text = dt.Rows(0).Item("Material8")
-        TextBox9.Text = dt.Rows(0).Item("Material9")
-        TextBox10.Text = dt.Rows(0).Item("Material10")
-        TextBox11.Text = dt.Rows(0).Item("Material11")
-        TextBox12.Text = dt.Rows(0).Item("Material12")
-        TextBox13.Text = dt.Rows(0).Item("Material13")
-        TextBox14.Text = dt.Rows(0).Item("Material14")
-        TextBox15.Text = dt.Rows(0).Item("Material15")
-        TextBox16.Text = dt.Rows(0).Item("Material16")
-        TextBox17.Text = dt.Rows(0).Item("Material17")
-        TextBox18.Text = dt.Rows(0).Item("Material18")
-        TextBox19.Text = dt.Rows(0).Item("Material19")
-        TextBox20.Text = dt.Rows(0).Item("Material20")
-        TextBox21.Text = dt.Rows(0).Item("Material21")
-        TextBox22.Text = dt.Rows(0).Item("Material22")
-        TextBox23.Text = dt.Rows(0).Item("Material23")
-        TextBox24.Text = dt.Rows(0).Item("Material24")
-        TextBox25.Text = dt.Rows(0).Item("Material25")
-        TextBox26.Text = dt.Rows(0).Item("Material26")
-        TextBox27.Text = dt.Rows(0).Item("Material27")
-        TextBox28.Text = dt.Rows(0).Item("Material28")
-        TextBox29.Text = dt.Rows(0).Item("Material29")
-        TextBox30.Text = dt.Rows(0).Item("Material30")
+        Dim textBoxes As List(Of TextBox) = New List(Of TextBox) From {TextBox1, TextBox2, TextBox3, TextBox4, TextBox5, TextBox6, TextBox7, TextBox8, TextBox9, TextBox10, TextBox11, TextBox12, TextBox13, TextBox14, TextBox15, TextBox16, TextBox17, TextBox18, TextBox19, TextBox20, TextBox21, TextBox22, TextBox23, TextBox24, TextBox25, TextBox26, TextBox27, TextBox28, TextBox29, TextBox30}
+        For i As Integer = 1 To 30
+            Try
+                textBoxes(i - 1).Text = dt.Rows(0).Item("Material" & i.ToString)
+            Catch ex As Exception
+                textBoxes(i - 1).Text = String.Empty
+            End Try
+        Next
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
