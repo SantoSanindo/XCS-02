@@ -33,6 +33,8 @@ Partial Class frmMain
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lbl_WOnos = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Txt_Msg = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -59,8 +61,6 @@ Partial Class frmMain
         Me.Command1 = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Barcode_Comm = New System.IO.Ports.SerialPort(Me.components)
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.lbl_WOnos = New System.Windows.Forms.Label()
         CType(Me.Image1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Ethernet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,6 +131,7 @@ Partial Class frmMain
         Me.Image1.Location = New System.Drawing.Point(35, 25)
         Me.Image1.Name = "Image1"
         Me.Image1.Size = New System.Drawing.Size(100, 92)
+        Me.Image1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Image1.TabIndex = 5
         Me.Image1.TabStop = False
         '
@@ -170,6 +171,30 @@ Partial Class frmMain
         Me.GroupBox1.Size = New System.Drawing.Size(884, 100)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
+        '
+        'lbl_WOnos
+        '
+        Me.lbl_WOnos.AutoSize = True
+        Me.lbl_WOnos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_WOnos.ForeColor = System.Drawing.Color.DarkGreen
+        Me.lbl_WOnos.Location = New System.Drawing.Point(211, 19)
+        Me.lbl_WOnos.Name = "lbl_WOnos"
+        Me.lbl_WOnos.Size = New System.Drawing.Size(63, 20)
+        Me.lbl_WOnos.TabIndex = 2
+        Me.lbl_WOnos.Text = "Label3"
+        Me.lbl_WOnos.Visible = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.DarkGreen
+        Me.Label8.Location = New System.Drawing.Point(59, 17)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(146, 20)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "Work Order Nos :"
+        Me.Label8.Visible = False
         '
         'Label6
         '
@@ -441,30 +466,6 @@ Partial Class frmMain
         '
         'Barcode_Comm
         '
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label8.Location = New System.Drawing.Point(59, 17)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(146, 20)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Work Order Nos :"
-        Me.Label8.Visible = False
-        '
-        'lbl_WOnos
-        '
-        Me.lbl_WOnos.AutoSize = True
-        Me.lbl_WOnos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_WOnos.ForeColor = System.Drawing.Color.DarkGreen
-        Me.lbl_WOnos.Location = New System.Drawing.Point(211, 19)
-        Me.lbl_WOnos.Name = "lbl_WOnos"
-        Me.lbl_WOnos.Size = New System.Drawing.Size(63, 20)
-        Me.lbl_WOnos.TabIndex = 2
-        Me.lbl_WOnos.Text = "Label3"
-        Me.lbl_WOnos.Visible = False
         '
         'frmMain
         '
