@@ -3,7 +3,7 @@
         Dim Filenum As Integer
         Filenum = FreeFile()
         Dim tempcode As String
-        Dim pos1, pos2, pos3, pos4, pos5 As Integer
+        Dim pos1, pos2, pos3, pos4 As Integer
 
         Console.WriteLine(INISTATUSPATH)
         FileOpen(Filenum, INISTATUSPATH, OpenMode.Input)

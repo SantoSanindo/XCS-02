@@ -1,6 +1,11 @@
 ﻿Imports System.Net
 Public Class frmMain
     Dim SlideCount As Integer
+    Dim ScanSeq As Integer
+    Dim AssyBuf As String
+    Dim TagRef As String
+    Dim TagWOnos As String
+    Dim TagQty As String
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer2.Enabled = True
         SlideCount = 47
@@ -37,7 +42,6 @@ Public Class frmMain
 
         lbl_currentref.Text = LoadWOfrRFID.JobProductMaterial
         lbl_wocounter.Text = LoadWOfrRFID.JobQTy
-        Label5.Text = LoadWOfrRFID.JobHeadCount
         lbl_currcounter.Text = LoadWOfrRFID.JobUnitaryCount 'head tester output
 
         If Not LoadParameter2PLC() Then
@@ -93,7 +97,7 @@ Public Class frmMain
     End Sub
 
     Private Sub Cmd_CS_Click(sender As Object, e As EventArgs) Handles Cmd_CS.Click
-        frmSelect.Show()
+        frmSelect.ShowDialog()
         If Not LoadParameter2PLC() Then
             MsgBox("Unable to communicate with PLC")
             Exit Sub
@@ -136,78 +140,70 @@ Public Class frmMain
             Command1.Text = "Eye Open"
         End If
     End Sub
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        'Ethernet.BackColor = Color.
+        Ethernet.BackColor = Color.Black
         Dim Headtest_count As Integer
-        Headtest_count = frmModbus.bacaModbus(40112)
-        lbl_currcounter.Text = Headtest_count 'head tester output
+        Dim Press_count As Integer
+
         If Val(lbl_currcounter.Text) >= Val(lbl_wocounter.Text) Then
             Txt_Msg.Text = "WO COMPLETED - STOP PROCESS"
-            Txt_Msg.BackColor = Color.White
-            Image1.Image = My.Resources.ResourceManager.GetObject("none")
-        Else
-            Dim Station_status As Long
-            Dim Press_count As Integer
-
-            TextBox2.Text = ""
-            Station_status = frmModbus.bacaModbus(40101)
-            Press_count = frmModbus.bacaModbus(40111)
-            Label5.Text = Press_count
-
-            Ethernet.BackColor = Color.Green
-            TextBox2.Text = Station_status
-
-            Select Case Station_status
-                Case 0
-                    Image1.Image = My.Resources.ResourceManager.GetObject("none")
-                    lbl_msg.Text = "Please load the head on the cavity and push..."
-                    Txt_Msg.Text = ""
-                    Txt_Msg.BackColor = Color.White
-                Case 1
-                Case 2
-                    Image1.Image = Nothing
-                    lbl_msg.Text = ""
-                    Txt_Msg.Text = "Testing in progress..."
-                    Txt_Msg.BackColor = Color.Gray
-                Case 3
-                Case 4
-                    Dim Test_result As Long
-                    Test_result = frmModbus.bacaModbus(40102)
-                    If Test_result = 1 Then
-                        Image1.Image = My.Resources.ResourceManager.GetObject("PASS")
-                        Image1.SizeMode = PictureBoxSizeMode.Zoom
-                        LoadWOfrRFID.JobHeadCount = Label5.Text
-                        LoadWOfrRFID.JobUnitaryCount = lbl_currcounter.Text
-                        UpdateStnStatus()
-                    Else
-                        Image1.Image = My.Resources.ResourceManager.GetObject("FAIL")
-                        Image1.SizeMode = PictureBoxSizeMode.Zoom
-                        Dim FailType As Long
-                        FailType = frmModbus.bacaModbus(40110)
-                        Select Case FailType
-                            Case 5
-                                Txt_Msg.Text = "--> Right Key failure"
-                            Case 6
-                                Txt_Msg.Text = "--> Left Key failure"
-                            Case 7
-                                Txt_Msg.Text = "--> Full Key failure"
-                            Case 8
-                                Txt_Msg.Text = "--> Plunge no return failure"
-                        End Select
-                        Txt_Msg.BackColor = Color.Red
-                    End If
-                    If Not frmModbus.tulisModbus(40101, 10) Then
-                        Txt_Msg.Text = "--> Unable to communicate with PLC - MW101"
-                        Txt_Msg.BackColor = Color.Red
-                    End If
-                Case 10
-                    Txt_Msg.Text = "Please unload product from cavity..."
-            End Select
         End If
+
+        Dim Station_status As Long
+        TextBox2.Text = ""
+        Station_status = frmModbus.bacaModbus(40101)
+        Headtest_count = frmModbus.bacaModbus(40112)
+        lbl_currcounter.Text = Headtest_count
+
+        Press_count = frmModbus.bacaModbus(40111)
+        Label5.Text = Press_count
+        Ethernet.BackColor = Color.Green
+        TextBox2.Text = Station_status
+
+        Select Case Station_status
+            Case 0
+                lbl_msg.Text = "Please load the head on the cavity and push..."
+            Case 1
+            Case 2
+                Image1.Image = Nothing
+                lbl_msg.Text = ""
+                Txt_Msg.Text = "Testing in progress..."
+                Txt_Msg.BackColor = Color.Gray
+            Case 3
+            Case 4
+                Dim Test_result As Long
+                Test_result = frmModbus.bacaModbus(40102)
+                If Test_result = 1 Then
+                    Image1.Image = My.Resources.ResourceManager.GetObject("PASS")
+                    LoadWOfrRFID.JobUnitaryCount = lbl_currcounter.Text
+                    UpdateStnStatus()
+                Else
+                    Image1.Image = My.Resources.ResourceManager.GetObject("FAIL")
+                    Dim FailType As Long
+                    FailType = frmModbus.bacaModbus(40110)
+                    Select Case FailType
+                        Case 5
+                            Txt_Msg.Text = "--> Right Key failure"
+                        Case 6
+                            Txt_Msg.Text = "--> Left Key failure"
+                        Case 7
+                            Txt_Msg.Text = "--> Full Key failure"
+                        Case 8
+                            Txt_Msg.Text = "--> Plunge no return failure"
+                    End Select
+                    Txt_Msg.BackColor = Color.Red
+                End If
+                If Not frmModbus.tulisModbus(40101, 10) Then
+                    Txt_Msg.Text = "--> Unable to communicate with PLC - MW101"
+                    Txt_Msg.BackColor = Color.Red
+                    Exit Sub
+                End If
+            Case 10
+                Txt_Msg.Text = "Please unload product from cavity..."
+        End Select
     End Sub
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Dim imageFileName = INISLIDEPATH & "\Slide" & SlideCount & ".JPG"
+        Dim imageFileName = INISLIDEPATH & "Slide" & SlideCount & ".JPG"
         PictureBox3.Image = Image.FromFile(imageFileName)
         SlideCount = SlideCount + 1
         If SlideCount = 52 Then SlideCount = 47
@@ -352,4 +348,89 @@ ErrorHandler:
             Command1.Visible = False
         End If
     End Sub
+    Private Sub DataReceived(sender As Object, e As IO.Ports.SerialDataReceivedEventArgs) Handles Barcode_Comm.DataReceived
+        AssyBuf = Barcode_Comm.ReadExisting()
+        If InStr(1, AssyBuf, vbCrLf) <> 0 Then
+            Me.Invoke(Sub()
+                          AssyBuf = Mid(AssyBuf, 1, InStr(1, AssyBuf, vbCr) - 1)
+                          If ScanSeq = 0 Then 'Scan WO Nos
+
+                              Txt_Msg.Text = "Changing Series..." & vbCrLf
+                              Txt_Msg.Text = Txt_Msg.Text = "WO NOS -  Assybuf" & vbCrLf
+                              lbl_msg.Text = "Please scan WO Reference..."
+                              TagWOnos = AssyBuf
+                              ScanSeq = 1
+                              AssyBuf = ""
+                              Exit Sub
+                          ElseIf ScanSeq = 1 Then 'scan Reference
+                              lbl_msg.Text = ""
+                              If Not RefCheck(AssyBuf) Then
+                                  Txt_Msg.Text = "Invalid Reference. Change Series is not allowed" & vbCrLf
+                                  AssyBuf = ""
+                                  Exit Sub
+                              End If
+                              Txt_Msg.Text = Txt_Msg.Text = "WO Reference -  Assybuf" & vbCrLf
+                              TagRef = AssyBuf
+                              ScanSeq = 2
+                              AssyBuf = ""
+                              Exit Sub
+                          ElseIf ScanSeq = 2 Then 'scan WO Qty
+                              lbl_msg.Text = ""
+                              If Not IsNumeric(AssyBuf) Then
+                                  Txt_Msg.Text = "Invalid quantity. Change Series is not allowed" & vbCrLf
+                                  AssyBuf = ""
+                                  Exit Sub
+                              End If
+                              Txt_Msg.Text = Txt_Msg.Text = "WO Qty -  Assybuf" & vbCrLf
+                              TagQty = AssyBuf
+                              ScanSeq = 0
+                              AssyBuf = ""
+                              Txt_Msg.Text = Txt_Msg.Text & "loading parameters to PLC..." & vbCrLf
+                              If Not LoadParameter(TagRef) Then
+                                  Txt_Msg.Text = "Unable to load parameters..."
+                                  Exit Sub
+                              End If
+                              Reset_PLC()
+
+                              If Not ActivateRackLED() Then
+                                  Txt_Msg.Text = Txt_Msg.Text & "--> Unable to communicate with PLC" & vbCrLf
+                                  Txt_Msg.Text = Txt_Msg.Text & "--> Change Series fail" & vbCrLf
+                                  Exit Sub
+                              End If
+                              'Send parameter to PLC
+                              If Not LoadParameter2PLC() Then
+                                  Txt_Msg.Text = "Unable to communicate with PLC"
+                                  Exit Sub
+                              End If
+                              If Not frmModbus.tulisModbus(40112, 0) Then 'Clear HeadTest counter
+                                  Txt_Msg.Text = Txt_Msg.Text & "--> Unable to communication with PLC" & vbCrLf
+                                  Txt_Msg.Text = Txt_Msg.Text & "--> Change Series fail" & vbCrLf
+                                  Exit Sub
+                              End If
+                              If Not frmModbus.tulisModbus(40113, 0) Then 'Clear Press counter
+                                  Txt_Msg.Text = Txt_Msg.Text & "--> Unable to communication with PLC" & vbCrLf
+                                  Txt_Msg.Text = Txt_Msg.Text & "--> Change Series fail" & vbCrLf
+                                  Exit Sub
+                              End If
+                              UpdateStnStatus()
+                              lbl_WOnos.Text = TagWOnos
+                              lbl_currentref.Text = TagRef
+                              lbl_wocounter.Text = TagQty
+                              Txt_Msg.Text = Txt_Msg.Text & "Change Series completed"
+                              Exit Sub
+                          End If
+                      End Sub)
+        End If
+    End Sub
+    Private Function RefCheck(strName As String) As Boolean
+        Dim temp As String
+        Dim query = "Select * From Parameter Where ModelName = '" & strName & "'"
+        Dim dt = KoneksiDB.bacaData(query).Tables(0)
+        On Error GoTo ErrorHandler
+
+        temp = dt.Rows(0).Item("ModelName")
+        Return True
+ErrorHandler:
+        Return False
+    End Function
 End Class

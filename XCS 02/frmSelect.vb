@@ -56,13 +56,6 @@
 
         LoadWOfrRFID.JobProductMaterial = ComboBox1.Text
         LoadWOfrRFID.JobQTy = TextBox1.Text
-        frmMain.lbl_currcounter.Text = "0"
-        LoadWOfrRFID.JobHeadCount = frmMain.lbl_currcounter.Text
-        frmMain.Label5.Text = "0"
-        LoadWOfrRFID.JobUnitaryCount = frmMain.Label5.Text
-        frmMain.lbl_currentref.Text = LoadWOfrRFID.JobProductMaterial
-        frmMain.lbl_wocounter.Text = LoadWOfrRFID.JobQTy
-        UpdateStnStatus()
-        Me.Hide()
+        Me.Close()
     End Sub
 End Class

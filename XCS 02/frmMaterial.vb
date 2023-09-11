@@ -40,7 +40,7 @@ Public Class frmMaterial
         TextBox30.Text = dt.Rows(0).Item("Material30")
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
+        Me.Close()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim konek As New SqlConnection(Database)

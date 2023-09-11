@@ -342,17 +342,17 @@ READRETRY:
 			SendString(i) = CByte(ii(i))
 		Next
 
-		frmMain.RFID_Comm.Write(SendString, 0, SendString.Length)
+		frmMain.Barcode_Comm.Write(SendString, 0, SendString.Length)
 		Thread.Sleep(20)
 		GoTo READINBYTE
 
 READINBYTE:
 		Str1 = ""
-		If frmMain.RFID_Comm.BytesToRead = 0 Then GoTo READ_RFID_TIMEOUT
+		If frmMain.Barcode_Comm.BytesToRead = 0 Then GoTo READ_RFID_TIMEOUT
 		Thread.Sleep(10)
-		Bcount = frmMain.RFID_Comm.BytesToRead
+		Bcount = frmMain.Barcode_Comm.BytesToRead
 		Do
-			Str2 = frmMain.RFID_Comm.ReadExisting()
+			Str2 = frmMain.Barcode_Comm.ReadExisting()
 			n = n + 1
 			Str2 = Asc(Str2)
 			Str1 = Str1 + Trim(Str(Str2)) + "," 'Build the string received frm OsiTrack
@@ -491,17 +491,17 @@ WRITERETRY:
 			SendString(i) = CByte(ii(i))
 		Next
 
-		frmMain.RFID_Comm.Write(SendString, 0, SendString.Length)
+		frmMain.Barcode_Comm.Write(SendString, 0, SendString.Length)
 		Thread.Sleep(20)
 		GoTo CHECKINBYTE
 
 CHECKINBYTE:
-		If frmMain.RFID_Comm.BytesToRead = 0 Then GoTo WRITE_COMM_TIMEOUT
+		If frmMain.Barcode_Comm.BytesToRead = 0 Then GoTo WRITE_COMM_TIMEOUT
 		Thread.Sleep(10)
-		Bcount = frmMain.RFID_Comm.BytesToRead
+		Bcount = frmMain.Barcode_Comm.BytesToRead
 		Str1 = ""
 		Do
-			Str2 = frmMain.RFID_Comm.ReadExisting()
+			Str2 = frmMain.Barcode_Comm.ReadExisting()
 			n = n + 1
 			Str2 = Asc(Str2)
 			Str1 = Str1 + Trim(Str(Str2)) + ","
@@ -587,17 +587,17 @@ WRITERETRY:
 			SendString(i) = CByte(ii(i))
 		Next
 
-		frmMain.RFID_Comm.Write(SendString, 0, SendString.Length)
+		frmMain.Barcode_Comm.Write(SendString, 0, SendString.Length)
 		Thread.Sleep(20)
 		GoTo CHECKINBYTE
 
 CHECKINBYTE:
-		If frmMain.RFID_Comm.BytesToRead = 0 Then GoTo WRITE_COMM_TIMEOUT
+		If frmMain.Barcode_Comm.BytesToRead = 0 Then GoTo WRITE_COMM_TIMEOUT
 		Thread.Sleep(50)
-		Bcount = frmMain.RFID_Comm.BytesToRead
+		Bcount = frmMain.Barcode_Comm.BytesToRead
 		Str1 = ""
 		Do
-			Str2 = frmMain.RFID_Comm.ReadExisting()
+			Str2 = frmMain.Barcode_Comm.ReadExisting()
 			n = n + 1
 			Str2 = Asc(Str2)
 			Str1 = Str1 + Trim(Str(Str2)) + ","
@@ -677,17 +677,17 @@ READRETRY:
 			SendString(i) = CByte(ii(i))
 		Next
 
-		frmMain.RFID_Comm.Write(SendString, 0, SendString.Length)
+		frmMain.Barcode_Comm.Write(SendString, 0, SendString.Length)
 		Thread.Sleep(20)
 		GoTo READ_RFID_TIMEOUT
 
 READINBYTE:
 		Str1 = ""
-		If frmMain.RFID_Comm.BytesToRead = 0 Then GoTo READ_RFID_TIMEOUT
+		If frmMain.Barcode_Comm.BytesToRead = 0 Then GoTo READ_RFID_TIMEOUT
 		Thread.Sleep(10)
-		Bcount = frmMain.RFID_Comm.BytesToRead
+		Bcount = frmMain.Barcode_Comm.BytesToRead
 		Do
-			Str2 = frmMain.RFID_Comm.ReadExisting()
+			Str2 = frmMain.Barcode_Comm.ReadExisting()
 			'If Str2 = "" Then GoTo skip
 			n = n + 1
 			Str2 = Asc(Str2)
