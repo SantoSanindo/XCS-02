@@ -79,6 +79,7 @@ Public Class frmMain
     End Sub
 
     Private Sub cmd_quit_Click(sender As Object, e As EventArgs) Handles cmd_quit.Click
+        Barcode_Comm.Close()
         Me.Close()
     End Sub
 

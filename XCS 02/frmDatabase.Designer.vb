@@ -104,7 +104,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox2.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox2.Location = New System.Drawing.Point(215, 96)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(41, 26)
@@ -280,7 +280,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox11.FormattingEnabled = True
-        Me.ComboBox11.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox11.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox11.Location = New System.Drawing.Point(215, 366)
         Me.ComboBox11.Name = "ComboBox11"
         Me.ComboBox11.Size = New System.Drawing.Size(41, 26)
@@ -290,7 +290,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox10.FormattingEnabled = True
-        Me.ComboBox10.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox10.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox10.Location = New System.Drawing.Point(215, 336)
         Me.ComboBox10.Name = "ComboBox10"
         Me.ComboBox10.Size = New System.Drawing.Size(41, 26)
@@ -300,7 +300,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox9.FormattingEnabled = True
-        Me.ComboBox9.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox9.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox9.Location = New System.Drawing.Point(215, 306)
         Me.ComboBox9.Name = "ComboBox9"
         Me.ComboBox9.Size = New System.Drawing.Size(41, 26)
@@ -310,7 +310,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox8.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox8.Location = New System.Drawing.Point(215, 276)
         Me.ComboBox8.Name = "ComboBox8"
         Me.ComboBox8.Size = New System.Drawing.Size(41, 26)
@@ -320,7 +320,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox7.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox7.Location = New System.Drawing.Point(215, 246)
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(41, 26)
@@ -330,7 +330,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox6.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox6.Location = New System.Drawing.Point(215, 216)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(41, 26)
@@ -340,7 +340,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox5.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox5.Location = New System.Drawing.Point(215, 186)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(41, 26)
@@ -350,7 +350,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox4.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox4.Location = New System.Drawing.Point(215, 156)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(41, 26)
@@ -360,7 +360,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox3.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox3.Location = New System.Drawing.Point(215, 126)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(41, 26)
@@ -432,7 +432,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox21.FormattingEnabled = True
-        Me.ComboBox21.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox21.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox21.Location = New System.Drawing.Point(486, 366)
         Me.ComboBox21.Name = "ComboBox21"
         Me.ComboBox21.Size = New System.Drawing.Size(41, 26)
@@ -450,7 +450,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox20.FormattingEnabled = True
-        Me.ComboBox20.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox20.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox20.Location = New System.Drawing.Point(486, 336)
         Me.ComboBox20.Name = "ComboBox20"
         Me.ComboBox20.Size = New System.Drawing.Size(41, 26)
@@ -468,7 +468,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox19.FormattingEnabled = True
-        Me.ComboBox19.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox19.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox19.Location = New System.Drawing.Point(486, 306)
         Me.ComboBox19.Name = "ComboBox19"
         Me.ComboBox19.Size = New System.Drawing.Size(41, 26)
@@ -486,7 +486,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox18.FormattingEnabled = True
-        Me.ComboBox18.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox18.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox18.Location = New System.Drawing.Point(486, 276)
         Me.ComboBox18.Name = "ComboBox18"
         Me.ComboBox18.Size = New System.Drawing.Size(41, 26)
@@ -504,7 +504,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox17.FormattingEnabled = True
-        Me.ComboBox17.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox17.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox17.Location = New System.Drawing.Point(486, 246)
         Me.ComboBox17.Name = "ComboBox17"
         Me.ComboBox17.Size = New System.Drawing.Size(41, 26)
@@ -522,7 +522,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox16.FormattingEnabled = True
-        Me.ComboBox16.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox16.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox16.Location = New System.Drawing.Point(486, 216)
         Me.ComboBox16.Name = "ComboBox16"
         Me.ComboBox16.Size = New System.Drawing.Size(41, 26)
@@ -540,7 +540,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox15.FormattingEnabled = True
-        Me.ComboBox15.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox15.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox15.Location = New System.Drawing.Point(486, 186)
         Me.ComboBox15.Name = "ComboBox15"
         Me.ComboBox15.Size = New System.Drawing.Size(41, 26)
@@ -558,7 +558,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox14.FormattingEnabled = True
-        Me.ComboBox14.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox14.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox14.Location = New System.Drawing.Point(486, 156)
         Me.ComboBox14.Name = "ComboBox14"
         Me.ComboBox14.Size = New System.Drawing.Size(41, 26)
@@ -576,7 +576,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox13.FormattingEnabled = True
-        Me.ComboBox13.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox13.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox13.Location = New System.Drawing.Point(486, 126)
         Me.ComboBox13.Name = "ComboBox13"
         Me.ComboBox13.Size = New System.Drawing.Size(41, 26)
@@ -594,7 +594,7 @@ Partial Class frmDatabase
         '
         Me.ComboBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox12.FormattingEnabled = True
-        Me.ComboBox12.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox12.Items.AddRange(New Object() {"", "0", "1"})
         Me.ComboBox12.Location = New System.Drawing.Point(486, 96)
         Me.ComboBox12.Name = "ComboBox12"
         Me.ComboBox12.Size = New System.Drawing.Size(41, 26)
